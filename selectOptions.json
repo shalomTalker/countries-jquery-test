@@ -1,0 +1,30 @@
+[
+    {
+        "searchKey": "all",
+        "display": "All"
+    },
+    {
+        "searchKey": "name",
+        "display": "Name"
+    },
+    {
+        "searchKey": "code",
+        "display": "Code"
+    },
+    {
+        "searchKey": "currency",
+        "display": "Currency"
+    },
+    {
+        "searchKey": "lang",
+        "display": "Language"
+    },
+    {
+        "searchKey": "city",
+        "display": "Capital"
+    },
+    {
+        "searchKey": "region",
+        "display": "Region"
+    }
+]

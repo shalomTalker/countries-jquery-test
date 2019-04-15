@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: #666;
+        }
+
+        #users {
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .user-card {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .user-card span {
+            width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .btns {
+            width: 100%;
+        }
+
+        .btns button {
+            width: 40%;
+        }
+
+        .btns button:first-child {
+            margin-right: 0.5rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Random users Client</h1>
+    <button id="generateBtn">click me to generate user</button>
+    <div class="container">
+
+        <div class="row" id="countries">
+        </div>
+        <script type="text/javascript">
+            let optionsJSON =
+                [
+                    {
+                        "searchKey": "all",
+                        "display": "All"
+                    },
+                    {
+                        "searchKey": "name",
+                        "display": "Name"
+                    },
+                    {
+                        "searchKey": "alpha",
+                        "display": "Code"
+                    },
+                    {
+                        "searchKey": "currency",
+                        "display": "Currency"
+                    },
+                    {
+                        "searchKey": "lang",
+                        "display": "Language"
+                    },
+                    {
+                        "searchKey": "city",
+                        "display": "Capital"
+                    },
+                    {
+                        "searchKey": "region",
+                        "display": "Region"
+                    }
+                ];
+            console.log(typeof JSON.stringify(optionsJSON))
+            optionsJSON = JSON.stringify(optionsJSON)
+        </script>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
