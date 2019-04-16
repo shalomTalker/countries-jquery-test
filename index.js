@@ -2,10 +2,17 @@ const container = $('#countries');// browser tag container
 let localCountries = JSON.parse(localStorage.getItem('localCountries'))
 const selectOptions = JSON.parse(optionsJSON)
 
-const generateUrl = function (key,value) {
-    if(key!== 'all'){
+const findCountryIndex = function (localCountries, numericCode) {
+    for (let i = 0; i < localCountries.length; i++) {
+        if (localCountries[i].numericCode === numericCode) {
+            return i;
+        }
+    }
+}
+const generateUrl = function (key, value) {
+    if (key !== 'all') {
         return `https://restcountries.eu/rest/v2/${key}/${value}`
-    }else{
+    } else {
         return `https://restcountries.eu/rest/v2/all`
 
     }
@@ -25,13 +32,7 @@ const handleSubmit = function (e) {
 const deleteCountry = function (numericCode) {
 
     localCountries = JSON.parse(localStorage.getItem('localCountries'))
-    let index;
-
-    for (let i = 0; i < localCountries.length; i++) {
-        if (localCountries[i].numericCode === numericCode) {
-            index = i
-        }
-    }
+    let index = findCountryIndex(localCountries,numericCode)
 
     $(`[data-id=${numericCode}]`).remove()
     localCountries.splice(index, 1)
